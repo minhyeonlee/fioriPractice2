@@ -5,12 +5,13 @@
         <content>
             <!-- <Text text = "{/esClassSet/0/Cname}"/> -->
             <!-- SAP GateWay에서는 상기 절대경로가 하기와 같이 바뀜 -->
-            <Text text="{/esClassSet('400001)/Cnamse}"/>
+            <Text text="{/esClassSet('400001')/Cname}"/>
             <Table id = "classID" items="{/esClassSet}">
                 <columns>
                     <Column><header><Text text="Class ID" /></header></Column>
                     <Column><header><Text text="Class Name" /></header></Column>
                     <Column><header><Text text="Class Location" /></header></Column>
+                    <Column><header><Text text="Class Location Text" /></header></Column>
                 </columns>
                 <items>
                     <ColumnListItem press="onClick" type="Active">
@@ -18,6 +19,7 @@
                             <Text text="{Class}" />
                             <Text text="{Cname}" />
                             <Text text="{Clocat}" />
+                            <Text text="{ClocatT}" />
                         </cells>
                     </ColumnListItem>
                 </items>
