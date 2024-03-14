@@ -1,0 +1,30 @@
+<mvc:View controllerName="sync04.zfc0290.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <!-- <Text text = "{/esClassSet/0/Cname}"/> -->
+            <!-- SAP GateWay에서는 상기 절대경로가 하기와 같이 바뀜 -->
+            <Text text="{/esClassSet('400001)/Cnamse}"/>
+            <Table id = "classID" items="{/esClassSet}">
+                <columns>
+                    <Column><header><Text text="Class ID" /></header></Column>
+                    <Column><header><Text text="Class Name" /></header></Column>
+                    <Column><header><Text text="Class Location" /></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem press="onClick" type="Active">
+                        <cells>
+                            <Text text="{Class}" />
+                            <Text text="{Cname}" />
+                            <Text text="{Clocat}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+            
+        </content>
+
+    </Page>
+</mvc:View>
