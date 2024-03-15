@@ -1,0 +1,43 @@
+<mvc:View controllerName="sync04.zfc0282.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <!-- Search Condition -->
+            <l:VerticalLayout>
+                <l:HorizontalLayout>
+                    <Label text="Location"/>
+                    <ComboBox id="inpLoc" items="{/esClassSet}" selectedKey="{/esClassSet('400001')/Clocat}" selectionChange="onSelectChange" >
+                        <items>
+                            <core:Item Key="{Clocat}" text="{Clocat}"/>
+                        </items>
+                    </ComboBox>
+                    <Button text="Search" press="onSearch"/>
+                </l:HorizontalLayout>
+            </l:VerticalLayout>
+
+            <Table id = "idTabClass" items="{/esClassSet}">
+                <columns>
+                    <Column><header><Text text="Class ID" /></header></Column>
+                    <Column><header><Text text="Class Name" /></header></Column>
+                    <Column><header><Text text="Class Location" /></header></Column>
+                    <Column><header><Text text="Class Location Text" /></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem press="onClick" type="Active">
+                        <cells>
+                            <Text text="{Class}" />
+                            <Text text="{Cname}" />
+                            <Text text="{Clocat}" />
+                            <Text text="{ClocatT}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+</mvc:View>

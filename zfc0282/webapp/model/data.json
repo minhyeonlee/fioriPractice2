@@ -1,0 +1,18 @@
+{
+	"esClassSet": [
+		{ "Class": "400001", "Cname": "SYNC4기 1반", "Clocat": "L01" },
+		{ "Class": "400002", "Cname": "SYNC4기 2반", "Clocat": "L01" },
+		{ "Class": "400003", "Cname": "SYNC4기 3반", "Clocat": "L02" },
+		{ "Class": "400004", "Cname": "SYNC4기 4반", "Clocat": "L01" },
+		{ "Class": "400005", "Cname": "SYNC4기 5반", "Clocat": "L02" } 
+	],
+	"esStdSet": [
+		{ "Stdno": "24010001", "Sname": "강길동",  "Gesch":"1", "Stcla": "400001" },
+		{ "Stdno": "24010002", "Sname": "홍길동2", "Gesch":"1", "Stcla": "400002" },
+		{ "Stdno": "24010003", "Sname": "한길동2", "Gesch":"2", "Stcla": "400002" },
+		{ "Stdno": "24010004", "Sname": "한길동3", "Gesch":"2", "Stcla": "400003" }, 
+		{ "Stdno": "24010005", "Sname": "강길동4", "Gesch":"1", "Stcla": "400004" },
+		{ "Stdno": "24010006", "Sname": "강길동5", "Gesch":"1", "Stcla": "400005" },
+		{ "Stdno": "24010007", "Sname": "홍길동5", "Gesch":"1", "Stcla": "400005" }
+    ]
+}
