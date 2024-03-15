@@ -1,0 +1,42 @@
+<mvc:View controllerName="sync04.zfc0291.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    >
+    <Page id="page" title="{i18n>title}">
+            <Panel id="idPanel">
+                <content>
+                    <l:VerticalLayout>
+                        <l:HorizontalLayout>
+                        <Input id="inpStdno" value="24040001" />
+                        <Button id="searchBtn" text="search" press="onSearch" />
+                        </l:HorizontalLayout>
+                        <!-- input: stdno, search: 정보가 버튼을 누를 때 나타남 -->
+                        <Text text="{Sname}"/>
+                        <Table id="stdDetail">
+                            <columns>
+                                <Column><header><Text text= "Student Number" /></header></Column>
+                                <Column><header><Text text= "Student Name" /></header></Column>
+                                <Column><header><Text text= "Gender Code" /></header></Column>
+                                <Column><header><Text text= "Gender" /></header></Column>
+                                <Column><header><Text text= "Class Code" /></header></Column>
+                                <Column><header><Text text= "Class" /></header></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem press="onClick" type="Active">
+                                    <cells>
+                                        <Text text="{Stdno}" />
+                                        <Text text="{Sname}" />
+                                        <Text text="{Gesch}" />
+                                        <Text text="{GeschT}" />
+                                        <Text text="{Stcla}" />
+                                        <Text text="{Cname}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </l:VerticalLayout>
+                </content>
+            </Panel>
+    </Page>
+</mvc:View>
