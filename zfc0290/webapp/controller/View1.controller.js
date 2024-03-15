@@ -10,6 +10,9 @@ sap.ui.define([
         return Controller.extend("sync04.zfc0290.controller.View1", {
             onInit: function () {
 
+            },
+            onSearch: function(){
+
             }
         });
     });

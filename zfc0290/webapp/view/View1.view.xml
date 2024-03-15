@@ -5,6 +5,11 @@
         <content>
             <!-- <Text text = "{/esClassSet/0/Cname}"/> -->
             <!-- SAP GateWay에서는 상기 절대경로가 하기와 같이 바뀜 -->
+            
+            <Label text="Location"/>
+            <Input id="inpLoc"/>
+            <Button text="Search" press="onSearch"/>
+
             <Text text="{/esClassSet('400001')/Cname}"/>
             <Table id = "classID" items="{/esClassSet}">
                 <columns>
