@@ -1,0 +1,35 @@
+<mvc:View controllerName="sync04.zfc02111.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <l:VerticalLayout>
+                <l:HorizontalLayout>
+                    <Label text="Class"></Label>
+                    <Input id="searchClass" value="{create>/cInfo/Class}"></Input>
+                    <Button id="onSearch" text="Search"/>
+                </l:HorizontalLayout>
+                <Button id="onCreate" press="onCreate" text="Create"/>
+                <Button id="onUpdate" press="onUpdate" text="Update"/>
+
+                <l:HorizontalLayout>
+                    <Label text="Class" width="100px"></Label>
+                    <Input id="inpClass" value="{create>/cInfo/Class}"></Input>
+                </l:HorizontalLayout>
+
+                <l:HorizontalLayout>
+                    <Label text="Class Name" width="100px"></Label>
+                    <Input id="inpCname" value="{create>/cInfo/Cname}"></Input>
+                </l:HorizontalLayout>
+
+                <l:HorizontalLayout>
+                    <Label text="Location" width="100px"></Label>
+                    <Input id="inpClocat" value="{create>/cInfo/Clocat}"></Input>
+                </l:HorizontalLayout>
+
+            </l:VerticalLayout>
+
+        </content>
+    </Page>
+</mvc:View>
