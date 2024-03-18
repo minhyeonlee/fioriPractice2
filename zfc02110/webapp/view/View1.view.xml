@@ -1,0 +1,16 @@
+<mvc:View controllerName="sync04.zfc02110.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Label text="Class"></Label>
+            <Input id="inpClass" value="{create>/cInfo/Class}"></Input>
+            <Label text="Class Name"></Label>
+            <Input id="inpCname" value="{create>/cInfo/Cname}"></Input>
+            <Label text="Location"></Label>
+            <Input id="inpClocat" value="{create>/cInfo/Clocat}"></Input>
+            <Button text="Create" press="onCreate"/>
+        </content>
+
+    </Page>
+</mvc:View>
