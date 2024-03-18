@@ -25,7 +25,31 @@ sap.ui.define([
             onCreate: function(){
                 let oCreateModel = this.getView().getModel("create");
                 oCreateModel = oCreateModel.getData();
-                alert( oCreateModel.cInfo.Class + oCreateModel.cInfo.Cname + oCreateModel.cInfo.Clocat);
+                // alert( oCreateModel.cInfo.Class + oCreateModel.cInfo.Cname + oCreateModel.cInfo.Clocat);
+                // Model에 이름안주면 Default Model
+                // Model, Entity, Entry(객체/값)
+                let oModel = this.getView().getModel();
+                let sPath = '/esClassSet';
+                let oEntry = {
+                    "Class": oCreateModel.cInfo.Class, 
+                    "Cname": oCreateModel.cInfo.Cname,
+                    "Clocat": oCreateModel.cInfo.Clocat
+                };
+                oModel.create(
+                    sPath,
+                    oEntry,
+                    {
+                        // success, error event
+                        // oModel function 호출이되면 success로 인식함.
+                        success: function( oData, oResponse ){
+                            alert("Success");
+                        },
+                        error: function(){
+                            alert("Exception Error"); // SAP Gateway oModel Fail
+                        }
+                    }
+
+                );
             }
         });
     });
