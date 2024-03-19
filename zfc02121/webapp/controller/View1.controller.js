@@ -71,7 +71,7 @@ sap.ui.define([
                 let oEntry={
                     "Cname": oUpdateData.uInfo.Cname,
                     "Clocat": oUpdateData.uInfo.Clocat,
-                    //"Begda" : "20240318" // 20240318로 들어감, 20240318로 넣으면 타입이 안맞아서 exception 오류
+                    //"Begda" : c // 20240318로 들어감, 20240318로 넣으면 타입이 안맞아서 exception 오류
                     "BegdaT" : oDate // "2024-03-01" T에 넣고 아밥에서 ls_begda = ls_ztfc0299-begda = ls_ui5-begda_t.
                 };
                 let sPath = oModel.createKey('/esClassSet', {
