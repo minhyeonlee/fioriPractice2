@@ -15,9 +15,10 @@ sap.ui.define([
                 // oView.setValue("400001");
                 // Update Model Setting
                 let oData={
-                    uInfo:{
+                    sInfo:{
                     }
                 }
+
                 let oJSONModel = new JSONModel();
                 oJSONModel.setData( oData );
                 this.getView().setModel(oJSONModel, "update")
@@ -38,13 +39,14 @@ sap.ui.define([
 
                 // Quiz
                 let oUpdateModel = this.getView().getModel("update");
-                oUpdateModel = oUpdateModel.getData();
+                oUpdateModel  = oUpdateModel.getData();
 
                 let oView = this.getView();
                 let inpClassValue = oView.byId("inpCondClass").getValue();
                 let sPath = "/esClassSet('" + inpClassValue + "')";
 
                 let oModel = oView.getModel();
+    
                 oModel.read(sPath, {
                     method: "Get",
                     success: function( oData ){
@@ -53,11 +55,39 @@ sap.ui.define([
 
                     },
                     error: function( oData ){
-                        oView.getModel("update").setProperty('/uInfo', oData);
-                        oView.byId("PanelUpd").refresh();
+                        alert("Exception Error");
+                        // oView.getModel("update").setProperty('/uInfo', oData);
+                        // oView.byId("PanelUpd").refresh();
                     }
 
                 });
+            },
+            onUpdate: function(){
+                let oUpdateModel = this.getView().getModel("update");
+                let oUpdateData = oUpdateModel.getData();
+                let oModel = this.getView().getModel();
+                let oEntry={
+                    "Cname": oUpdateData.uInfo.Cname,
+                    "Clocat": oUpdateData.uInfo.Clocat
+                };
+                let sPath = oModel.createKey('/esClassSet', {
+                    "Class": oUpdateData.uInfo.Class
+                });
+                oModel.update(
+                    sPath, oEntry,
+                    {
+                        success: function( oData, oResponse){
+                            //oData 없음
+                            if( oResponse.headers.smesg != undefined ){
+                                alert(oResponse.headers.smesg);
+                            }
+                        },
+                        error: function(){
+                            alert("Exception Error");
+                        }
+                    }
+                );
             }
+
         });
     });

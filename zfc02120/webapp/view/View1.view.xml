@@ -45,6 +45,7 @@
             <Label text="Location" width="100px"></Label>
             <Input id="inpUpdClocat" value="{update>/uInfo/Clocat}" />
         </content>
+        <Button id="updateBtn" press="onUpdate" text="Update" ></Button>
     </Panel>
     </Page>
 </mvc:View>
