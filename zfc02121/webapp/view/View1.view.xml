@@ -1,0 +1,24 @@
+<mvc:View controllerName="sync04.zfc02121.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <Page id="page" title="{i18n>title}">
+    
+        <Label text="Condition Class" width="100px"> </Label>
+        <Input id="inpCondClass" width="200px"/>
+        <Button id="searchBtn" press="onSearch" text="Search" ></Button>
+
+        <Panel id="PanelUpd" expanded="true" expandable="true">
+            <content>
+                <Label text="Class" width="100px"></Label>
+                <Input id="inpUpdClass" value="{update>/uInfo/Class}" />
+                <Label text="Class Name" width="100px"></Label>
+                <Input id="inpUpdCname" value="{update>/uInfo/Cname}" />
+                <Label text="Location" width="100px"></Label>
+                <Input id="inpUpdClocat" value="{update>/uInfo/Clocat}" />
+            </content>
+            <Button id="updateBtn" press="onUpdate" text="Update" ></Button>
+        </Panel>
+    </Page>
+</mvc:View>
