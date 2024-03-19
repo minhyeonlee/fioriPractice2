@@ -39,11 +39,11 @@
     <Panel id="PanelUpd" expanded="true" expandable="true">
         <content>
             <Label text="Class" width="100px"></Label>
-            <Input id="inpUpdClass" value="{Class}" />
+            <Input id="inpUpdClass" value="{update>/uInfo/Class}" />
             <Label text="Class Name" width="100px"></Label>
-            <Input id="inpUpdCname" value="{Cname}" />
+            <Input id="inpUpdCname" value="{update>/uInfo/Cname}" />
             <Label text="Location" width="100px"></Label>
-            <Input id="inpUpdClocat" value="{Clocat}" />
+            <Input id="inpUpdClocat" value="{update>/uInfo/Clocat}" />
         </content>
     </Panel>
     </Page>
