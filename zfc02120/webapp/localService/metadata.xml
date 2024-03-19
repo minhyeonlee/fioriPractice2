@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGWFC0303_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="esClass" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Class"/>
+                </Key>
+                <Property Name="Class" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="클래스 ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sflag" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cname" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="클래스 이름" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Smesg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="S/F Mesg" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clocat" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Class Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ClocatT" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="학급지역명" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="esLocat" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Clocat"/>
+                </Key>
+                <Property Name="Clocat" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Class Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ClocatT" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="학급지역명" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGWFC0303_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="esClassSet" EntityType="ZGWFC0303_SRV.esClass" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="esLocatSet" EntityType="ZGWFC0303_SRV.esLocat" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://210.16.199.141:8001/sap/opu/odata/sap/ZGWFC0303_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://210.16.199.141:8001/sap/opu/odata/sap/ZGWFC0303_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
