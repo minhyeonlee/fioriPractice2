@@ -18,6 +18,7 @@
                 <Label text="Location" width="100px"></Label>
                 <Input id="inpUpdClocat" value="{update>/uInfo/Clocat}" />
                 <Label text="Date"/>
+                <Text text="{update>/uInfo/Begda} " />
                 <Text text="{update>/uInfo/BegdaT} " />
                 <DatePicker id="inpUpdBegda" editable="true"
                             value="{
