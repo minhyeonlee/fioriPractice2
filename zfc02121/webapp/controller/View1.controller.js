@@ -45,8 +45,8 @@ sap.ui.define([
                     },
                     error: function( oData ){
                         alert("Exception Error");
-                        // oView.getModel("update").setProperty('/uInfo', oData);
-                        // oView.byId("PanelUpd").refresh();
+                        oView.getModel("update").setProperty('/uInfo', oData);
+                        oView.byId("PanelUpd").refresh();
                     }
 
                 });
