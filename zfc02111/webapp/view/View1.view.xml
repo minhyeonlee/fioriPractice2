@@ -1,7 +1,9 @@
 <mvc:View controllerName="sync04.zfc02111.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
     <Page id="page" title="{i18n>title}">
         <content>
             <l:VerticalLayout>
@@ -25,7 +27,16 @@
 
                 <l:HorizontalLayout>
                     <Label text="Location" width="100px"></Label>
-                    <Input id="inpClocat" value="{create>/cInfo/Clocat}"></Input>
+                    <!-- <Input id="inpClocat" value="{create>/cInfo/Clocat}"></Input> -->
+                    <!-- Combo Box -->
+                    <Input value="{esClassSet('400001')/Clocat}"/>
+                    <!-- selectedKey="{/create>/cInfo/Clocat}"  -->
+                    <!-- <ComboBox id="comboClass" items="{/esClassSet}"
+                                                    selectionChange="onSelectChange">
+                        <items>
+                            <core:Item key="{clocat}" text="{Clocat}"/>
+                        </items>
+                    </ComboBox> -->
                 </l:HorizontalLayout>
 
             </l:VerticalLayout>
