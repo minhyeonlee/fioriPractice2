@@ -17,6 +17,17 @@
                 <Input id="inpUpdCname" value="{update>/uInfo/Cname}" />
                 <Label text="Location" width="100px"></Label>
                 <Input id="inpUpdClocat" value="{update>/uInfo/Clocat}" />
+                <Label text="Date"/>
+                <Text text="{update>/uInfo/BegdaT} " />
+                <DatePicker id="inpUpdBegda" editable="true"
+                            value="{
+                                path: 'update>/uInfo/Begda',
+                                type: 'sap.ui.model.odata.type.Date',
+                                formatOptions:{
+                                    pattern: 'YYYY.MM.dd'
+                                }
+                             }" 
+                />
             </content>
             <Button id="updateBtn" press="onUpdate" text="Update" ></Button>
         </Panel>
