@@ -1,0 +1,18 @@
+<mvc:View controllerName="sync04.zfclast02.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <!-- Year Condition Fragment 호출-->
+            <core:Fragment fragmentName="sync04.zfclast02.view.condFrag" type="XML"/>
+
+            <!-- Revenue List Fragment 호출-->
+            <core:Fragment fragmentName="sync04.zfclast02.view.revFrag" type="XML"/>
+
+            <!-- 항공사의 연도별 매출에 PieChart Fragment 호출-->
+            <core:Fragment fragmentName="sync04.zfclast02.view.yearlyFrag" type="XML"/>
+        </content>
+    </Page>
+</mvc:View>
